@@ -88,7 +88,7 @@ Visualizations:
 
 Clone the repository:
 
-git clone https://github.com/yourusername/RandomForrestAbundance.git
+git clone https://github.com/BeckBioHub/RandomForrestAbundance.git
 cd RandomForrestAbundance
 
 
