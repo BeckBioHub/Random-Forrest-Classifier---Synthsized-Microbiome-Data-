@@ -1,4 +1,4 @@
-# 🌲🌳 Random Forest Classifier for Microbiome Abundance Data🌳🌲
+# 🌲 Random Forest Classifier for Microbiome Abundance Data🌲
 
 ![Probability_heatmap_by_Diet](https://github.com/user-attachments/assets/899c79c4-1d85-40c2-b83f-f924bcce8543)
 
