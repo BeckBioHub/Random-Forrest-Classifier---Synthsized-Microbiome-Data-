@@ -1,6 +1,7 @@
 # 🌱 Random Forest Classifier for Microbiome Abundance Data
 
-![Probability_heatmap_by_Diet](https://github.com/user-attachments/assets/a7bc347d-b6b7-4f47-b395-b2ffc5b33507)
+![Probability_heatmap_by_Diet](https://github.com/user-attachments/assets/899c79c4-1d85-40c2-b83f-f924bcce8543)
+
 
 
 This repository demonstrates how to train, evaluate, and apply a **Random Forest classifier** on microbiome relative abundance data.  
