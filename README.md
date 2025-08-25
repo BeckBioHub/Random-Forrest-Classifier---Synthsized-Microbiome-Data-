@@ -1,118 +1,99 @@
-Random Forest Classifier for Microbiome Abundance Data
-
+# 🌱 Random Forest Classifier for Microbiome Abundance Data
 
 ![Probability_heatmap_by_Diet](https://github.com/user-attachments/assets/0cef61b3-df55-4b67-b7c6-f3b9eb5d5366)
 
-Project Overview
-This repository demonstrates how to train and evaluate a Random Forest classifier on microbiome relative abundance data.
-The workflow covers:
+This repository demonstrates how to train, evaluate, and apply a **Random Forest classifier** on microbiome relative abundance data.  
+It includes preprocessing, cross-validation, model tuning, and visualization of prediction probabilities — including **faceted heatmaps grouped by diet**.
+
+---
+
+## 📂 Repository Structure
+
+├── data/
+│ ├── Lifelike_relative_abundance_150samples.csv
+│ └── Lifelike_relative_abundance__preview_2.csv
+├── models/
+│ ├── rf_model.rds
+│ └── rf_features.rds
+├── scripts/
+│ └── RandomForrestAbundance.Rmd
+├── results/
+│ ├── ROC_curve.png
+│ ├── mtry_tuning.png
+│ ├── prediction_heatmap.png
+│ ├── Probability_heatmap_by_Diet.jpg
+│ └── predictions_on_lifelike_preview.csv
+└── README.md
 
 
+---
 
-Data preprocessing and feature alignment
+## ⚙️ Methods
 
-Training with repeated k-fold cross-validation
+### Data Preparation
+- Input: microbiome **abundance table** (samples × taxa)  
+- Optional: sample metadata (e.g., *Diet*) for grouping/plotting  
+- Workflow:
+  - Coerce abundances to numeric
+  - Normalize to relative abundances
+  - Align new datasets to training features for reproducibility
 
-Evaluation using ROC curves, AUC, and class probabilities
+### Model Training
+- **Random Forest** classifier (`caret::train`, `method = "rf"`)
+- **5-fold cross-validation**, repeated twice
+- Performance metrics: ROC curves, AUC, sensitivity, specificity
 
-Visualization of prediction probabilities, including heatmaps grouped by diet
+### Model Tuning
+- Tested different **mtry** values (variables per split)  
+- ROC/AUC stable across tested values, best around *mtry ≈ 11*
 
-The aim is to explore how microbial composition can classify samples (e.g., Healthy vs. Disease) and provide a reproducible template for applying machine learning to microbiome data.
+### Evaluation
+- ROC curves confirm excellent discrimination (AUC > 0.95)
+- Confusion matrices and predicted class probabilities
+- **Heatmaps** of sample probabilities, faceted by *Diet*
 
-📂 Repository Structure
-├── data/                
-│   ├── Lifelike_relative_abundance_150samples.csv
-│   └── Lifelike_relative_abundance__preview_2.csv
-├── models/             
-│   ├── rf_model.rds
-│   └── rf_features.rds
-├── scripts/             
-│   ├── RandomForrestAbundance.Rmd   
-├── results/           
-│   ├── ROC_curve.png
-│   ├── mtry_tuning.png
-│   ├── prediction_heatmap.png
-│   └── predictions_on_lifelike_preview.csv
-├── README.md       
+---
 
+## 📊 Key Results
 
-⚙️ Methods
+- Cross-validation ROC: **~0.95–0.96** (excellent discrimination)
+- Best *mtry*: ~11 (stable across range)
+- Visualizations:
+  - ROC curve (high sensitivity & specificity)
+  - Heatmap of predicted probabilities (Healthy vs. Disease)
+  - Faceting by *Diet* highlights grouping patterns
 
-Data Preparation
+---
 
-1. Microbiome abundance table (samples × taxa)
-
-- Optional metadata (e.g., Diet) kept for grouping/plotting
-
-- Data coerced to numeric, normalized, and aligned to training feature set
-
-2. Model Training
-
-- Random Forest classifier (caret::train with method="rf")
-
-- 5-fold cross-validation, repeated twice
-
-- Evaluation metrics: ROC (AUC), sensitivity, specificity
-
-3. Model Tuning
-
-- Tested different mtry values (number of variables tried at each split)
-
-- ROC (AUC) stable across mtry, peak at ~11
-
-4. Evaluation
-
-- ROC curves confirm excellent model performance (AUC > 0.95)
-
-- Confusion matrices and probability distributions
-
-- Heatmaps of class probabilities grouped by Diet
-
-
-📊 Key Results
-
-Cross-validation ROC: ~0.95–0.96 (excellent discrimination power)
-
-Best mtry: ~11 (but performance stable across range)
-
-Visualizations:
-
-- ROC curve (high sensitivity & specificity)
-
-- Heatmap of predicted probabilities for Healthy vs Disease
-
-- Faceting by Diet reveals grouping patterns
-
-
-🚀 Usage
+## 🚀 Usage
 
 Clone the repository:
 
 git clone https://github.com/BeckBioHub/RandomForrestAbundance.git
 cd RandomForrestAbundance
 
-
 Run the analysis in R:
-
 # Install dependencies
-install.packages(c("caret", "randomForest", "pROC", "ggplot2", "tidyverse"))
+install.packages(c("caret", "randomForest", "pROC", "ggplot2", "tidyverse", "rmarkdown"))
 
-# Open RMarkdown workflow
+# Render the RMarkdown workflow
 rmarkdown::render("scripts/RandomForrestAbundance.Rmd")
 
-
-Outputs (plots, ROC curves, predictions) will be saved in the results/ folder.
 
 🔧 Dependencies
 
 R ≥ 4.2
 
-Packages: caret, randomForest, ggplot2, tidyverse, pROC
-
-
+Packages:
+- caret
+- randomForest
+- ggplot2
+- tidyverse
+- pROC
+- rmarkdown
 
 ✨ Author
 
-Frederik Beck
-PhD in Microbiology & Bioinformatics
-Specializing in gut microbiome modeling and in-vitro gut systems.
+Frederik Beck, PhD
+Microbiologist & Bioinformatician
+Specializing in gut microbiome modeling and in-vitro gut systems
