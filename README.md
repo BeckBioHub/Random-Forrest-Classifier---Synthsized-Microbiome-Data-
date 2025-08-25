@@ -8,7 +8,7 @@ This repository demonstrates how to train, evaluate, and apply a **Random Forest
 It includes preprocessing, cross-validation, model tuning, and visualization of prediction probabilities — including **faceted heatmaps grouped by diet**.
 
 ---
-
+```
 ## 📂 Repository Structure
 
 ├── data/
@@ -27,7 +27,7 @@ It includes preprocessing, cross-validation, model tuning, and visualization of 
 │ └── predictions_on_lifelike_preview.csv
 └── README.md
 
-
+```
 ---
 
 ## ⚙️ Methods
