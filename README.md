@@ -2,7 +2,7 @@
 
 [![Probability_heatmap_by_Diet](https://github.com/user-attachments/assets/899c79c4-1d85-40c2-b83f-f924bcce8543)](https://rpubs.com/BeckBioHub/RFCMA)
 
-[View on RPubs](https://rpubs.com/yourname/randomforest_abundance](https://rpubs.com/BeckBioHub/RFCMA))
+[View on RPubs](https://rpubs.com/BeckBioHub/RFCMA)
 
 
 
