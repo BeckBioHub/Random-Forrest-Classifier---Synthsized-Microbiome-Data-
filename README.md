@@ -2,9 +2,9 @@
 
 [![Probability_heatmap_by_Diet](https://github.com/user-attachments/assets/899c79c4-1d85-40c2-b83f-f924bcce8543)](https://rpubs.com/BeckBioHub/RFCMA)
 
+[View on RPubs]([https://rpubs.com/yourname/randomforest_abundance](https://rpubs.com/BeckBioHub/RFCMA))
 
 
-https://rpubs.com/BeckBioHub/RFCMA
 
 This repository demonstrates how to train, evaluate, and apply a **Random Forest classifier** on microbiome relative abundance data.  
 It includes preprocessing, cross-validation, model tuning, and visualization of prediction probabilities — including **faceted heatmaps grouped by diet**.
