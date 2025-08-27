@@ -11,7 +11,7 @@
 
 
 This repository demonstrates how to train, evaluate, and apply a **Random Forest classifier** on microbiome relative abundance data.  
-It includes preprocessing, cross-validation, model tuning, and visualization of prediction probabilities — including **faceted heatmaps grouped by diet**.
+It includes preprocessing, cross-validation, model tuning, and visualization of prediction probabilities.
 
 ---
 ```
