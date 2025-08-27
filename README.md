@@ -1,7 +1,7 @@
 # 🌲 Random Forest Classifier for Microbiome Abundance Data🌲
 
 
-![Probability_heatmap_by_Diet](https://github.com/user-attachments/assets/ee412f5e-f1e3-4b32-82e2-199e8a41ed85)
+![AllPlots](https://github.com/user-attachments/assets/38865cbb-2bb2-42ca-9da9-8d48bdb3c033)
 
 
 
@@ -77,7 +77,8 @@ It includes preprocessing, cross-validation, model tuning, and visualization of 
 
 Clone the repository:
 
-git clone https://github.com/BeckBioHub/RandomForrestAbundance.git
+
+git clone https://github.com/BeckBioHub/RandomForestClassifier-Microbiome-Abundance-Data
 cd RandomForrestAbundance
 
 Run the analysis in R:
