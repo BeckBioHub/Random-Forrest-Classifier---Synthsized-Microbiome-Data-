@@ -6,7 +6,7 @@
 
 
 
-## [Link: to script Random Classifier for Microbiome Abundance Data](https://rpubs.com/BeckBioHub/RFCMA)
+## [Link: Rmarkdown for Random Classifier for Microbiome Abundance Data](https://rpubs.com/BeckBioHub/RFCMA)
 
 
 
