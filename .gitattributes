@@ -3,3 +3,4 @@
 *.Rmd    linguist-language=R
 *.rmd    linguist-language=R
 *.Rproj  linguist-language=R
+*.html  linguist-language=R
